@@ -33,8 +33,8 @@ class InstanceLevelDecorator(_BaseDecorator):
         def advisor(cls):
             def decorated_init(init):
                 def __init__(self, *args, **kwargs):
-                    decorate(func.__get__(self, cls), self, cls)
                     init(self, *args, **kwargs)
+                    decorate(func.__get__(self, cls), self, cls)
                 return __init__
             cls.__init__ = decorated_init(cls.__init__)
             return cls

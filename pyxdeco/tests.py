@@ -1,3 +1,5 @@
+import doctest
+import os.path
 import unittest
 from pyxdeco import ClassLevelDecorator, InstanceLevelDecorator, MethodLevelDecorator
 from pyxdeco import class_level_decorator, instance_level_decorator, method_level_decorator
@@ -143,4 +145,7 @@ class TestDecorators(unittest.TestCase):
 
 
 if __name__=="__main__":
+    testfile = os.path.join(os.path.dirname(__file__), '..', 'README.rst')
+    doctest.testfile(testfile)
     unittest.main()
+
