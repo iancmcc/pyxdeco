@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='pyxdeco',
       version=version,
-      description="Extraordinary Decorators",
+      description="Python eXtraordinary Decorators",
       long_description=open('README.rst').read(),
       klassifiers=[
           "Programming Language :: Python",
